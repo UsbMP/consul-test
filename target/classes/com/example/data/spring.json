@@ -1,0 +1,38 @@
+{
+    "id": "spring",
+    "name": "spring",
+    "address": "127.0.0.1",
+    "port": 8080,
+    "tags": [
+        "urlprefix-/comentarios",
+        "urlprefix-/comentario",
+        "urlprefix-/comentario/nuevo",
+        "urlprefix-/comentario/actualizar",
+        "urlprefix-/comentario/eliminar",
+        "urlprefix-/Kafka/Evento-1",
+        "urlprefix-/Kafka/Evento-1/enviar",
+        "urlprefix-/email/enviar",
+        "urlprefix-/Consul/Spring/Path/desregistrar",
+        "urlprefix-/Consul/Spring/Path/registrar",
+        "urlprefix-/Consul/Spring/desregistrar"
+    ],
+    "check": {
+        "name": "GET",
+        "interval": "60s",
+        "status": "passing",
+        "args": [
+            "curl",
+            "127.0.0.1:8080/"
+        ]
+    },
+    "tagged_addresses": {
+        "lan": {
+          "address": "127.0.0.1",
+          "port": 8080
+        },
+        "wan": {
+            "address": "0.0.0.0",
+            "port": 8080
+        }
+    }
+}
